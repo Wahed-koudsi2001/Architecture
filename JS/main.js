@@ -27,3 +27,10 @@ function activate() {
         this.classList.add('active');
     });
 }
+
+// For spinner
+let spinner = document.querySelector('.spinner');
+
+setInterval(() => {
+    spinner.classList.add('none');
+}, 5000)
