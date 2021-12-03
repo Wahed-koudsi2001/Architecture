@@ -1,0 +1,79 @@
+.our-team {
+    padding: 80px 0;
+    width: 100%;
+    .row {
+        margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            gap: 40px;
+        }
+        .col {
+            flex-basis: 30%;
+            position: relative;
+            z-index: -1;
+            border-radius: 5px;
+            overflow: hidden;
+            &:hover .content {
+                bottom: 0px;
+            }
+            &:hover .img img {
+                opacity: 0.5;
+            }
+            .img {
+                box-shadow: 0 3px 7px rgba(#000, 1);
+                width: 100%;
+                height: 400px;
+                margin: auto;
+                border-radius: 5px;
+                background-color: #262626;
+                @media (max-width: 767px) {
+                    width: initial;
+                    height: initial;
+                }
+                img {
+                    transition: 0.4s linear;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: 0.8;
+                }
+            }
+            .content {
+                position: absolute;
+                bottom: -250px;
+                padding: 20px;
+                transition: 0.4s linear;
+                h3 {
+                    font-family: "Baloo Da 2", serif;
+                    font-weight: 400;
+                    font-size: 22px;
+                    color: #eee;
+                }
+                span {
+                    font-family: "Muli", serif;
+                    color: #a52a2a;
+                    font-size: 18px;
+                }
+                p {
+                    font-family: "Baloo da 2", serif;
+                    color: #eee;
+                    font-size: 14px;
+                }
+                .btn {
+                    background-color: $main;
+                    display: inline-block;
+                    border: none;
+                    padding: 10px 20px;
+                    color: #fff;
+                    border-radius: 5px;
+                    margin-top: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

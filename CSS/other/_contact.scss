@@ -1,0 +1,104 @@
+.contact {
+    background-color: #272727;
+    height: 100vh;
+    overflow: hidden;
+    .row {
+        padding: 3% 7%;
+        display: flex;
+        height: 100%;
+        .col-img {
+            position: relative;
+            flex-basis: 30%;
+            @media (max-width: 767px) {
+                flex-basis: 0%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000000, 0.2);
+            }
+        }
+        .col-form {
+            flex-basis: 70%;
+            background-color: #eee;
+            @media (max-width: 767px) {
+                flex-basis: 100%;
+            }
+            h1 {
+                text-align: center;
+                font-size: 30px;
+                font-family: "Baloo Da 2", serif;
+                color: #272727;
+                font-weight: 300;
+            }
+            form {
+                margin-top: 50px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .box {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 40px 0;
+                    border-bottom: 2px dashed #272727;
+                    position: relative;
+                    transition: 0.4s linear;
+                    span {
+                        position: absolute;
+                        bottom: 0;
+                        text-transform: uppercase;
+                        font-family: "Baloo Da 2", serif;
+                        color: #4b4b4b;
+                        transition: 0.2s linear;
+                    }
+                    input,
+                    textarea {
+                        padding: 10px 0;
+                        border: none;
+                        background-color: transparent;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    &.active {
+                        border-bottom: 2px solid #272727;
+                        span {
+                            bottom: 40px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .btn {
+                    font-family: "Muli", serif;
+                    display: block;
+                    text-transform: uppercase;
+                    background-color: $main;
+                    color: #fff;
+                    letter-spacing: 1px;
+                    font-weight: 300;
+                    font-size: 22px;
+                    width: 60%;
+                    border: none;
+                    padding: 10px 0;
+                    cursor: pointer;
+                    transition: 0.1s linear;
+                    &:hover {
+                        box-shadow: 1px 3px 5px #000;
+                    }
+                }
+            }
+        }
+    }
+}

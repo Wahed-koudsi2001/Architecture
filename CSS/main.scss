@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Others
+@import "other/variables";
+@import "other/container";
+@import "other/landing";
+@import "other/utilites";
+@import "other/about";
+@import "other/our-team";
+@import "other/contact";
